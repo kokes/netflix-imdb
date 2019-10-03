@@ -6,7 +6,7 @@ I wanted to cross reference Netflix shows with IMDB to see what's what. I know t
 First I needed a list of shows. I already had that from a different side project - you just need to go to a listing - here's [a subsite with all shows with given subtitles](https://www.netflix.com/browse/subtitles/cs). You scroll all the way to the bottom (while waiting for each new page to be downloaded) and once you reach the end, you open the developer console and run
 
 ```javascript
-document.querySelectorAll('div.rowContainer div.fallback-text').forEach(x => console.log(x.textContent))
+document.querySelectorAll('div.boxart-container p.fallback-text').forEach(x => console.log(x.textContent))
 ```
 
 This gives you a list of shows listed on the current page (given current DOM, this may change in the future). Copy and paste this from the console, clean it up a little and save it as a line-delimited list.
